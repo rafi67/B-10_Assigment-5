@@ -5,12 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
+    <!-- daisy ui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- script for font and colors  -->
+    <script src="/font&colors.js"></script>
 </head>
 
-<body>
-    <header></header>
+<body class="font-lexend">
+    <header class="relative flex-nowrap mx-auto w-full min-h-32 bg-nav-bg-primary backdrop-blur-sm">
+        <nav class="container w-full mx-auto">
+            <div class="justify-between navbar">
+                <!-- navbar start -->
+                <div class="navbar-start">
+                    <button class="w-28 btn btn-active bg-button-primary border-none hover:bg-button-primary text-xl font-semibold text-text-primary">Block</button>
+                </div>
+
+                <!-- navbar center -->
+                <div class="navbar-center space-x-4">
+                    <img src="assets/logo.png" alt="logo">
+                    <h3 class="text-xl text-text-primary font-semibold">Donate Bangladesh</h3>
+                </div>
+
+                <!-- navbar end -->
+                <div class="navbar-end flex">
+                   <img src="assets/coin.png" alt="coin">
+                   <h3 class="text-xl text-nav-end-text font-medium space-x-9">5500 BDT</h3>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main></main>
     <footer></footer>
 </body>
