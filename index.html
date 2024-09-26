@@ -45,14 +45,14 @@
         <section class="mt-40">
             <!-- button section -->
             <div class="mb-8 justify-center flex space-x-4">
-                <button
-                    class="w-32 btn btn-active bg-button-primary border-none hover:bg-button-primary text-xl font-semibold text-text-primary">Donation</button>
-                <button
-                    class="w-32 bg-white btn border-2 text-xl font-medium text-nav-end-text border-neutral-200 rounded-lg">History</button>
+                <button id="donation"
+                    class="w-32 btn btn-active bg-button-primary border-none hover:bg-button-primary text-xl font-semibold text-text-primary" onclick="showDonation()">Donation</button>
+                <button id="history"
+                    class="w-32 bg-white btn border-2 text-xl font-medium text-nav-end-text border-neutral-200 rounded-lg" onclick="showHistory()">History</button>
             </div>
 
             <!-- donation section -->
-            <div class="hidden">
+            <div id="donation-section" class="">
                 <!-- donate section 1 -->
                 <div class="w-[90%] mx-auto space-x-8 flex border-2 border-neutral-100 rounded-2xl p-8">
                     <div class="w-[50%]">
@@ -76,7 +76,7 @@
                             placeholder="Write Donation Amount">
 
                         <button
-                            class="rounded-lg hover:bg-button-primary bg-button-primary btn text-text-primary font-semibold text-xl">Donate
+                            class="rounded-lg hover:bg-button-primary bg-button-primary btn text-text-primary font-semibold text-xl" onclick="my_modal_2.showModal()">Donate
                             Now</button>
                     </div>
                 </div>
@@ -107,8 +107,8 @@
                             placeholder="Write Donation Amount">
 
                         <button
-                            class="rounded-lg btn bg-button-primary hover:bg-button-primary text-text-primary font-semibold text-xl">Donate
-                            Now</button>
+                            class="rounded-lg btn bg-button-primary hover:bg-button-primary text-text-primary font-semibold text-xl" onclick="my_modal_2.showModal()">Donate
+                            Now</button>     
                     </div>
                 </div>
 
@@ -123,7 +123,7 @@
                             <img src="assets/coin.png" alt="">
                             2400 BDT
                         </button>
-                        <h3 class="text-text-primary font-bold">Donate for Flood Relief in Feni,Bangladesh</h3>
+                        <h3 class="text-text-primary font-bold">Aid for Injured in the Quota Movement</h3>
                         <p class="text-nav-end-text font-light text-base">The recent Quota movement has resulted in
                             numerous injuries and significant hardship for many individuals. Your support is crucial in
                             providing medical assistance, rehabilitation, and necessary supplies to those affected. By
@@ -136,35 +136,57 @@
                             placeholder="Write Donation Amount">
 
                         <button
-                            class="rounded-lg btn bg-button-primary hover:bg-button-primary text-text-primary font-semibold text-xl">Donate
+                            class="rounded-lg btn bg-button-primary hover:bg-button-primary text-text-primary font-semibold text-xl" onclick="my_modal_2.showModal()">Donate
                             Now</button>
                     </div>
                 </div>
             </div>
 
             <!-- history section -->
-             <div class="">
+            <div id="history-section" class="hidden">
                 <!-- history 1 -->
                 <div class="w-11/12 border-2 border-neutral-100 rounded-2xl p-8 mx-auto mt-6">
-                    <h3 class="text-xl font-bold text-text-primary">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h3>
-                    <p class="text-base font-light">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+                    <h3 class="text-xl font-bold text-text-primary">96500 Taka is Donated for famine-2024 at Feni,
+                        Bangladesh</h3>
+                    <p class="text-base font-light">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
+                    </p>
                 </div>
 
                 <!-- history 2 -->
                 <div class="w-11/12 border-2 border-neutral-100 rounded-2xl p-8 mx-auto mt-6">
-                    <h3 class="text-xl font-bold text-text-primary">6500 Taka is Donated for Flood Relief in Feni,Bangladesh</h3>
-                    <p class="text-base font-light">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+                    <h3 class="text-xl font-bold text-text-primary">6500 Taka is Donated for Flood Relief in
+                        Feni,Bangladesh</h3>
+                    <p class="text-base font-light">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
+                    </p>
                 </div>
 
                 <!-- history 3 -->
                 <div class="w-11/12 border-2 border-neutral-100 rounded-2xl p-8 mx-auto mt-6">
-                    <h3 class="text-xl font-bold text-text-primary">15500 Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h3>
-                    <p class="text-base font-light">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+                    <h3 class="text-xl font-bold text-text-primary">15500 Taka is Donated for Aid for Injured in the
+                        Quota Movement, Bangladesh</h3>
+                    <p class="text-base font-light">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
+                    </p>
                 </div>
-             </div>
+            </div>
+
+            <!-- modal -->
+            <dialog id="my_modal_2" class="modal">
+                <div class="modal-box flex flex-col items-center space-y-3">
+                    <h3 class=" text-3xl font-bold">Congrates!</h3>
+                    <img src="assets/coin.png" alt="coin">
+                    <p class="py-4">You Have Donated for Humankind</p>
+                    <h4 class="font-bold">Successfully</h4>
+                    <button class="btn">close confirmation</button>
+                </div>
+                <form method="dialog" class="modal-backdrop">
+                    <button>close</button>
+                </form>
+            </dialog>
         </section>
     </main>
     <footer class="h-28 flex flex-col bg-nav-bg-primary container mt-20 bottom-0"></footer>
+    <script src="js/features.js"></script>
+    <script src="js/utilities.js"></script>
 </body>
 
 </html>
