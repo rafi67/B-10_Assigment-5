@@ -1,5 +1,11 @@
-function showSectionGetById(id) {
-    document.getElementById('donation-section').classList.add('hidden');
-    document.getElementById('history-section').classList.add('hidden');
-    document.getElementById(id).classList.remove('hidden');
+function showHistory() {
+    showSectionGetById('history-section');
+    removeClassFromDiv('footer', 'mt-20')
+    addClassToDiv('footer', 'mt-24')
 }
+
+function showDonation() {
+    showSectionGetById('donation-section');
+    removeClassFromDiv('footer', 'mt-24');
+    addClassToDiv('footer', 'mt-20');
+} 
