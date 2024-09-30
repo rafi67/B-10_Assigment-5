@@ -10,9 +10,10 @@ function addCash(id) {
         setTextFieldById('balance', newBalance + ' BDT');
         setInputFieldById('input-balance' + '-' + id, "");
         my_modal_2.showModal();
+        addHistory('donation-'+id, inputBalance);
     }
     else {
-        alert('insufficient balance');
+        alert('Failed to donate');
         setInputFieldById('input-balance' + '-' + id, "");
     }
 

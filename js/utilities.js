@@ -1,9 +1,35 @@
 function showSectionGetById(id) {
-    document.getElementById('donation-section').classList.add('hidden');
-    document.getElementById('history-section').classList.add('hidden');
-    document.getElementById(id).classList.remove('hidden');
+    addClassToDiv('donation-section', 'hidden');
+    addClassToDiv('history-section', 'hidden');
+    removeClassFromDiv(id, 'hidden');
 }
 
+
+function createElementById(id, title, date) {
+    let newDiv = document.createElement('div');
+    let header = document.createElement('h3');
+    let paragraph = document.createElement('p');
+    header.innerText = title;
+    paragraph.innerText = date;
+    header.classList.add('text-xl', 'font-bold', 'text-text-primary');
+    paragraph.classList.add('text-base', 'font-light');
+    newDiv.appendChild(header);
+    newDiv.appendChild(paragraph);
+    newDiv.classList.add('w-11/12', 'border-2', 'border-neutral-100', 'rounded-2xl', 'p-8', 'mx-auto', 'mt-6');
+    document.getElementById(id).appendChild(newDiv);
+}
+
+function createHistoryTitle(id, donationAmount) {
+    let data;
+    if(id==="donation-1") data = donationAmount+"Taka is Donated for famine-2024 at Noakhali, Bangladesh";
+    else if(id==="donation-2") data = donationAmount+"Taka is Donated for Flood Relief in Feni,Bangladesh";
+    else data = donationAmount+"Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh";
+    return data;
+}
+
+function createDateTime() {
+    return new Date();
+}
 
 function hideSectionById(id) {
     document.getElementById(id).classList.add('hidden');
@@ -31,6 +57,6 @@ function addClassToDiv(id, cls) {
     document.getElementById(id).classList.add(cls);
 }
 
-function RemoveClassFromDiv(id, cls) {
-    document.getElementById(id).classList.add(cls);
+function removeClassFromDiv(id, cls) {
+    document.getElementById(id).classList.remove(cls);
 }
