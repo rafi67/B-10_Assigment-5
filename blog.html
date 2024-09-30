@@ -1,49 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog || Donate Bangladesh</title>
-    <!-- daisy ui cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- google font cdn -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-    <!-- script for font and colors -->
-    <script src="/font&colors.js"></script>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Bangladesh</title>
+  <!-- daisy ui cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- google font cdn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <!-- script for font and colors  -->
+  <script src="/font&colors.js"></script>
+  <!-- font awesome cdn -->
+  <script src="https://kit.fontawesome.com/ce84752e9f.js" crossorigin="anonymous"></script></head>
 
 <body class="font-lexend">
-    <header class="w-full mx-auto fixed top-0 min-h-32 backdrop-blur-sm">
-        <nav class="w-full mx-auto">
-            <div class="justify-between navbar">
-                <!-- navbar start -->
-                <div class="navbar-start">
-                    <button
-                        class="w-28 btn btn-active bg-button-primary border-none hover:bg-button-primary text-xl font-semibold text-text-primary">Block</button>
-                </div>
+  <header class="w-full mx-auto fixed top-0 min-h-28 backdrop-blur-sm bg-nav-bg-primary">
+    <nav class="w-full mx-auto">
+      <div class="justify-between navbar">
+        <!-- navbar start -->
+        <div class="navbar-start">
+          <a href="index.html"
+            class="w-28 btn btn-active bg-button-primary border-none hover:bg-button-primary text-xl font-semibold text-text-primary">Home</a>
+        </div>
 
-                <!-- navbar center -->
-                <div class="navbar-center space-x-4">
-                    <img src="assets/logo.png" alt="logo">
-                    <h3 class="text-xl text-text-primary font-semibold">Donate Bangladesh</h3>
-                </div>
+        <!-- navbar center -->
+        <div class="navbar-center space-x-4">
+          <img src="assets/logo.png" alt="logo">
+          <h3 class="text-xl text-text-primary font-semibold">Donate Bangladesh</h3>
+        </div>
 
-                <!-- navbar end -->
-                <div class="navbar-end flex">
-                    <img src="assets/coin.png" alt="coin">
-                    <h3 class="text-xl text-nav-end-text font-medium space-x-9" id="balance">5500 BDT</h3>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        
-    </main>
-    <footer id="footer" class="w-full mx-auto h-28 bg-nav-bg-primary mt-20 bottom-0"></footer>
+        <!-- navbar end -->
+        <div class="navbar-end flex">
+          <img src="assets/coin.png" alt="coin">
+          <h3 class="text-xl text-nav-end-text font-medium space-x-9" id="balance">5500 BDT</h3>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container mx-auto h-[80vh] flex items-center">
+    <!-- FAQ section -->
+    <section class="flex items-center justify-center flex-col space-y-6">
+      <!-- text content -->
+      <div class="flex w-full space-x-3 items-center">
+        <h1 class="text-4xl text-text-primary font-bold">Important FAQ</h1>
+        <img src="assets/faq.png" alt="faq">
+      </div>
+
+      <!-- faq content -->
+      <div>
+        <!-- faq-1 -->
+        <div class="collapse collapse-arrow border-2 border-neutral-100 rounded-lg">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+          <div class="collapse-content">
+            <p>The Document Object Model (DOM) is a programming interface for web documents that represents the
+              structure of a webpage as a tree of objects. It allows scripts to dynamically access, modify, and update
+              the content, structure, and style of a website.</p>
+          </div>
+        </div>
+
+        <!-- faq-2 -->
+        <div class="collapse collapse-arrow border-2 border-neutral-100 rounded-lg">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+          <div class="collapse-content">
+            <p>To select an element from the DOM in JavaScript, you can use methods like document.querySelector() for a
+              single element or document.querySelectorAll() for multiple elements. For example,
+              document.querySelector('.className') selects the first element with the specified class.</p>
+          </div>
+        </div>
+
+        <!-- faq-3 -->
+        <div class="collapse collapse-arrow border-2 border-neutral-100 rounded-lg">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is
+            it useful?</div>
+          <div class="collapse-content">
+            <p>Event delegation is a technique where a single event listener is added to a parent element to handle
+              events from its child elements. It's useful because it improves performance by reducing the number of
+              event listeners and allows dynamic elements to be handled without needing to rebind listeners.</p>
+          </div>
+        </div>
+
+        <!-- faq-4 -->
+        <div class="collapse collapse-arrow border-2 border-neutral-100 rounded-lg">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">How do you manipulate an element;s attributes and styles using
+            the DOM?</div>
+          <div class="collapse-content">
+            <p>You can manipulate an element's attributes using methods like 'setAttribute()' and 'removeAttribute()'.
+              For styles, you can modify the 'style' property directly, such as 'element.style.color = "blue";', or
+              apply and remove CSS classes using 'classList.add()' and 'classList.remove()'.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="w-full mx-auto h-28 bg-nav-bg-primary mt-20 bottom-0"></footer>
+  <script src="js/features.js"></script>
+  <script src="js/utilities.js"></script>
+  <script src="js/addCash.js"></script>
 </body>
 
 </html>
