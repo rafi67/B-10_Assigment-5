@@ -12,6 +12,6 @@ function showDonation() {
 
 function addHistory(id, amount) {
     const historyTitle = createHistoryTitle(id, amount);
-    const dateTime = createDateTime();
+    const dateTime = 'Date : '+createDateTime();
     createElementById('history-section' ,historyTitle, dateTime);
 }
