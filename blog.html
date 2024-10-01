@@ -18,30 +18,55 @@
   <script src="https://kit.fontawesome.com/ce84752e9f.js" crossorigin="anonymous"></script></head>
 
 <body class="font-lexend">
-  <header class="w-full mx-auto fixed top-0 min-h-28 backdrop-blur-sm bg-nav-bg-primary">
+  <header class="w-full mx-auto fixed top-0 xl:min-h-32 backdrop-blur-sm">
     <nav class="w-full mx-auto">
-      <div class="justify-between navbar">
-        <!-- navbar start -->
-        <div class="navbar-start">
-          <a href="index.html"
-            class="w-28 btn btn-active bg-button-primary border-none hover:bg-button-primary text-xl font-semibold text-text-primary">Home</a>
-        </div>
+        <!-- navbar button -->
+        <div class="justify-between navbar">
+            <div class="navbar-start xl:hidden">
+                <div class="dropdown">
+                  <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                  </div>
+                  <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <li><a href="index.html">Home</a></li>
+                  </ul>
+                </div>
+              </div>
+            <!-- navbar start -->
+            <div class="navbar-start hidden xl:block">
+                <a href="blog.html"
+                    class="w-28 btn btn-active bg-button-primary border-none hover:bg-button-primary text-xl font-semibold text-text-primary"
+                    target="_blank">Blog</a>
+            </div>
 
-        <!-- navbar center -->
-        <div class="navbar-center space-x-4">
-          <img src="assets/logo.png" alt="logo">
-          <h3 class="text-xl text-text-primary font-semibold">Donate Bangladesh</h3>
-        </div>
+            <!-- navbar center -->
+            <div class="navbar-center space-x-4 hidden xl:block">
+                <img src="assets/logo.png" alt="logo">
+                <h3 class="text-xl text-text-primary font-semibold">Donate Bangladesh</h3>
+            </div>
 
-        <!-- navbar end -->
-        <div class="navbar-end flex">
-          <img src="assets/coin.png" alt="coin">
-          <h3 class="text-xl text-nav-end-text font-medium space-x-9" id="balance">5500 BDT</h3>
+            <!-- navbar end -->
+            <div class="navbar-end flex">
+                <img src="assets/coin.png" alt="coin">
+                <h3 class="text-xl text-nav-end-text font-medium space-x-9" id="balance">5500 BDT</h3>
+            </div>
         </div>
-      </div>
     </nav>
-  </header>
-  <main class="container mx-auto h-[90vh] flex items-center">
+</header>
+  <main class="container mx-auto h-[90vh] flex items-center mt-36 xl:mt-0">
     <!-- FAQ section -->
     <section class="flex items-center justify-center flex-col space-y-6">
       <!-- text content -->
