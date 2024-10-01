@@ -21,14 +21,32 @@ function createElementById(id, title, date) {
 
 function createHistoryTitle(id, donationAmount) {
     let data;
-    if(id==="donation-1") data = donationAmount+"Taka is Donated for famine-2024 at Noakhali, Bangladesh";
-    else if(id==="donation-2") data = donationAmount+"Taka is Donated for Flood Relief in Feni,Bangladesh";
-    else data = donationAmount+"Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh";
+    if (id === "donation-1") data = donationAmount + " Taka is Donated for famine-2024 at Noakhali, Bangladesh";
+    else if (id === "donation-2") data = donationAmount + " Taka is Donated for Flood Relief in Feni,Bangladesh";
+    else data = donationAmount + " Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh";
     return data;
 }
 
 function createDateTime() {
     return new Date();
+}
+
+function selectButton(donation_id, history_id, donation) {
+    
+    const btnDonation = document.getElementById(donation_id);
+    const btnHistory = document.getElementById(history_id);
+    if (donation) {
+        btnDonation.classList.remove('bg-white', 'border-2', 'text-xl', 'font-medium', 'text-nav-end-text', 'border-neutral-200', 'rounded-lg');
+        btnDonation.classList.add('btn-active', 'bg-button-primary', 'border-none', 'hover:bg-button-primary', 'text-xl', 'font-semibold', 'text-text-primary');
+        btnHistory.classList.remove('btn-active', 'bg-button-primary', 'border-none', 'hover:bg-button-primary', 'text-xl', 'font-semibold', 'text-text-primary');
+        btnHistory.classList.add('bg-white', 'border-2', 'text-xl', 'font-medium', 'text-nav-end-text', 'border-neutral-200', 'rounded-lg');
+    }
+    else {
+        btnDonation.classList.remove('bg-button-primary', 'border-none', 'hover:bg-button-primary', 'text-xl', 'font-semibold', 'text-text-primary');
+        btnDonation.classList.add('bg-white', 'border-2', 'text-xl', 'font-medium', 'text-nav-end-text', 'border-neutral-200', 'rounded-lg');
+        btnHistory.classList.remove('bg-white', 'border-2', 'text-xl', 'font-medium', 'text-nav-end-text', 'border-neutral-200', 'rounded-lg');
+        btnHistory.classList.add('btn-active', 'bg-button-primary', 'border-none', 'hover:bg-button-primary', 'text-xl', 'font-semibold', 'text-text-primary');   
+    }
 }
 
 function hideSectionById(id) {
